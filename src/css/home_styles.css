@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+/*
+IT206 HTML Final Project
+
+Author: Daniel Awesome
+Date:   03/15/2020
+
+File: bio_styles.css
+*/
+
+/*Base styles*/
+html{
+    font-family: 'Ubuntu Mono', "Courier New", monospace;
+    background: url(../images/neon_sun_night1.png) no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header{
+    width: 100%;
+    background-color: #2C132C;
+    border-bottom: #0D000D solid 5px;
+    border-top: #0D000D solid 5px;
+}
+
+header > img{
+    float: left;
+    width: 300px;
+    border: #2C132C solid 5px;
+    border-radius: 50%;
+    margin: 15px 0 0 15px;
+}
+
+div.flex_container a{
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+}
+
+div.flex_container a:link, div.flex_container a:visited{
+    color: #463726;
+}
+div.flex_container a:active{
+    color: #15900D;
+}
+div.flex_container a:hover{
+    color: #b38c66;
+}
+
+h1{
+    font-weight: bold;
+    color: #15900D;
+}
+
+p{
+    color: #096D00;
+}
+
+p#hello{
+    color: #15900D;
+}
+
+/*Mobile styles*/
+@media screen and (max-width: 480px){
+    header{
+        grid-area: head;
+    }
+    div#main_wrap{
+        grid-area: main;
+    }
+
+    header > img{
+        display: none;
+    }
+
+    header > div.flex_container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    img#mobile{
+        display: block;
+        width: 200px;
+        border: #2C132C solid 5px;
+        border-radius: 50%;
+        margin: 2% auto 0 auto;
+    }
+
+    header a img{
+        width: 50px;
+    }
+
+    div.flex_container a{
+        margin: 0 40px 2px 40px;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1{
+        font-size: 3em;
+        font-weight: bold;
+        margin: 2% 0 6% 0;
+    }
+
+    p:nth-of-type(1), p:nth-of-type(2), p:nth-of-type(3){
+        font-size: 1.2em;
+        margin: 1%;
+    }
+
+    p#hello{
+        margin-top: 10%;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*Tablet Styles*/
+@media screen and (min-width: 480px){
+    img#mobile{
+        display: none;
+    }
+
+    header a img{
+        width: 70px;
+    }
+
+    header > div.flex_container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    div.flex_container a{
+        margin: 8px;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 225px;
+    }
+
+    h1{
+        font-size: 6em;
+    }
+
+    p{
+        font-size: 1.6em;
+    }
+
+    p:nth-of-type(2){
+        margin: 5px 0 0 20%;
+    }
+
+    p:nth-of-type(3){
+        margin: 5px 0 0 40%;
+    }
+
+    p#hello{
+        float: none;
+        display: flex;
+        font-size: 2em;
+        justify-content: center;
+        margin: 12% 10% 0 10%;
+    }
+}
+
+/*Desktop styles*/
+@media screen and (min-width: 960px){
+    img#mobile{
+        display: none;
+    }
+
+    header a img{
+        width: 100px;
+    }
+
+    header > div.flex_container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    div.flex_container a{
+        margin: 8px;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 225px 5% 0 0;
+    }
+
+    h1{
+        font-size: 8em;
+    }
+
+    p{
+        font-size: 2em;
+    }
+
+    p:nth-of-type(2){
+        margin: 5px 0 0 20%;
+    }
+
+    p:nth-of-type(3){
+        margin: 5px 0 0 40%;
+    }
+
+    p#hello{
+        float: bottom;
+        font-size: 2em;
+        margin: 6% 0 0 55%;
+    }
+}
